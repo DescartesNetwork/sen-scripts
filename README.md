@@ -30,6 +30,7 @@ USAGE
 <!-- commands -->
 * [`sen-scripts hello [FILE]`](#sen-scripts-hello-file)
 * [`sen-scripts help [COMMAND]`](#sen-scripts-help-command)
+* [`sen-scripts keypair`](#sen-scripts-keypair)
 
 ## `sen-scripts hello [FILE]`
 
@@ -43,10 +44,6 @@ OPTIONS
   -f, --force
   -h, --help       show CLI help
   -n, --name=name  name to print
-
-EXAMPLE
-  $ sen-scripts hello
-  hello world from ./src/hello.ts!
 ```
 
 _See code: [src/commands/hello.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/hello.ts)_
@@ -67,5 +64,21 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
+
+## `sen-scripts keypair`
+
+describe the command here
+
+```
+USAGE
+  $ sen-scripts keypair
+
+OPTIONS
+  -f, --force          Force to overwrite the output
+  -h, --help           show CLI help
+  -i, --input=input    Directory to the config file, soprox.config.js
+  -o, --output=output  Directory to output the keypair file
+```
+
+_See code: [src/commands/keypair.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/keypair.ts)_
 <!-- commandsstop -->
-# sen-scripts

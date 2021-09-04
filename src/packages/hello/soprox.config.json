@@ -3,7 +3,7 @@
     "nodeUrl": "https://api.devnet.solana.com",
     "payer": {
       "address": "",
-      "secretKey": "55e689acc07bdedd4384253731bec7943d236558883a76bdb9d4c53b2894f0ab44173453aa04cfe4bf0ba2ee1441561c775240c068bbef7fcbcb4e5906e3be37"
+      "secretKey": ""
     },
     "program": {
       "address": "",
