@@ -60,7 +60,7 @@ export default class Soprox extends Command {
       path.join(project, '.gitignore'),
     )
     execSync('npm install', { cwd: project, stdio: 'inherit' })
-    execSync('npm prepare', { cwd: project, stdio: 'inherit' })
+    execSync('npm run prepare', { cwd: project, stdio: 'inherit' })
     spinner.succeed('The project has been created!')
     this.log('Check it out!', project)
   }
