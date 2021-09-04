@@ -48,6 +48,7 @@ export default class Soprox extends Command {
       path.join(template, 'dist'),
       path.join(template, 'node_modules'),
       path.join(template, 'package-lock.json'),
+      path.join(template, '.npmignore'),
     ]
     fs.copySync(template, project, {
       filter: function (src, dst) {
