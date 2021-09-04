@@ -4,7 +4,7 @@ import * as path from 'path'
 import { execSync } from 'child_process'
 
 function getTemplateDir(template: string) {
-  return path.join(__dirname, '../packages', template)
+  return path.join(__dirname, '../../packages', template)
 }
 
 export default class Soprox extends Command {
