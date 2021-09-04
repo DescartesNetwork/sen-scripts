@@ -18,7 +18,7 @@ $ npm install -g @senswap/sen-scripts
 $ sen-scripts COMMAND
 running command...
 $ sen-scripts (-v|--version|version)
-@senswap/sen-scripts/0.0.2 darwin-x64 node-v14.16.1
+@senswap/sen-scripts/0.0.3 darwin-x64 node-v14.16.1
 $ sen-scripts --help [COMMAND]
 USAGE
   $ sen-scripts COMMAND
@@ -65,7 +65,7 @@ OPTIONS
   -s, --show             Read the payer keypair
 ```
 
-_See code: [src/commands/payer.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.2/src/commands/payer.ts)_
+_See code: [src/commands/payer.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.3/src/commands/payer.ts)_
 
 ## `sen-scripts program [FILE]`
 
@@ -83,7 +83,7 @@ OPTIONS
   -s, --show             Read the program keypair
 ```
 
-_See code: [src/commands/program.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.2/src/commands/program.ts)_
+_See code: [src/commands/program.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.3/src/commands/program.ts)_
 
 ## `sen-scripts soprox [PROJECT]`
 
@@ -99,5 +99,5 @@ OPTIONS
   -t, --template=template  Choose template. Default: hello
 ```
 
-_See code: [src/commands/soprox.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.2/src/commands/soprox.ts)_
+_See code: [src/commands/soprox.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.3/src/commands/soprox.ts)_
 <!-- commandsstop -->

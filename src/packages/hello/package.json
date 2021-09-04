@@ -22,5 +22,7 @@
     "@solana/web3.js": "^1.24.1",
     "soprox-abi": "0.0.13"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@senswap/sen-scripts": "^0.0.3"
+  }
 }
