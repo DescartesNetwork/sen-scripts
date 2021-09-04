@@ -36,9 +36,9 @@ export default class Payer extends Command {
     const file = path.join(process.cwd(), args.file ?? DEFAULT_KEYPAIR)
     // View file only
     if (flags.show) {
-      if (!fs.existsSync(file)) throw new Error(`Cannot find ${file}.`)
+      if (!fs.existsSync(file)) return this.error(`Cannot find ${file}.`)
       const buf = require(file)
-      if (!buf) throw new Error(`The file ${file} is empty.`)
+      if (!buf) return this.error(`The file ${file} is empty.`)
       const keypair = Keypair.fromSecretKey(Buffer.from(buf))
       this.log(`Read file ${file}`)
       this.log('\tAddress:', keypair.publicKey.toBase58())
@@ -50,9 +50,9 @@ export default class Payer extends Command {
       const config = path.join(process.cwd(), flags.config ?? DEFAULT_CONFIG)
 
       if (!fs.existsSync(config))
-        throw new Error(`Cannot find the config file ${config}.`)
+        return this.error(`Cannot find the config file ${config}.`)
       if (fs.existsSync(file) && !flags.force) {
-        throw new Error(
+        return this.error(
           `The file ${file} already existed. Please change another name and try again!`,
         )
       } else {
@@ -66,11 +66,11 @@ export default class Payer extends Command {
         },
       } = require(config)
       if (!secretKey)
-        throw new Error(`Payer's secretKey in ${network} config is empty.`)
+        return this.error(`Payer's secretKey in ${network} config is empty.`)
       const keypair = Keypair.fromSecretKey(Buffer.from(secretKey, 'hex'))
       const generatedAddress = keypair.publicKey.toBase58()
       if (address && address !== generatedAddress)
-        throw new Error(
+        return this.error(
           `The address and generated address by secret key is unmatched, ${address} != ${generatedAddress}.`,
         )
       fs.writeFileSync(file, `[${keypair.secretKey.toString()}]`)

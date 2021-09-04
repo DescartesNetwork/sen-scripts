@@ -30,6 +30,7 @@ USAGE
 * [`sen-scripts help [COMMAND]`](#sen-scripts-help-command)
 * [`sen-scripts payer [FILE]`](#sen-scripts-payer-file)
 * [`sen-scripts program [FILE]`](#sen-scripts-program-file)
+* [`sen-scripts soprox [PROJECT]`](#sen-scripts-soprox-project)
 
 ## `sen-scripts help [COMMAND]`
 
@@ -83,4 +84,20 @@ OPTIONS
 ```
 
 _See code: [src/commands/program.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/program.ts)_
+
+## `sen-scripts soprox [PROJECT]`
+
+Generate a no-config Rust-based smart contract template on Solana
+
+```
+USAGE
+  $ sen-scripts soprox [PROJECT]
+
+OPTIONS
+  -f, --force              Force to overwrite the output
+  -h, --help               show CLI help
+  -t, --template=template  Choose template. Default: hello
+```
+
+_See code: [src/commands/soprox.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/soprox.ts)_
 <!-- commandsstop -->

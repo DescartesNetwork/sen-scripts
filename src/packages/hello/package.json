@@ -5,7 +5,6 @@
   "main": "index.js",
   "testnetDefaultChannel": "v1.6.9",
   "scripts": {
-    "start": "node ./client/index.js",
     "build": "cargo build-bpf --manifest-path=./program/Cargo.toml --bpf-out-dir=dist",
     "deploy": "solana program deploy -k ./dist/payer-keypair.json ./dist/main.so"
   },
