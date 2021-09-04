@@ -1,7 +1,7 @@
 {
   "name": "@senswap/sen-scripts",
   "description": "Convenient scripts for keypair creation, contract deployment, and many others",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "tuphan-dn @tuphan-dn",
   "bin": {
     "sen-scripts": "./bin/run"
@@ -34,13 +34,6 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "files": [
-    "/bin",
-    "/lib",
-    "/packages",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
   "homepage": "https://github.com/DescartesNetwork/sen-scripts",
   "keywords": [
     "oclif"
