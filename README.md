@@ -28,25 +28,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`sen-scripts hello [FILE]`](#sen-scripts-hello-file)
 * [`sen-scripts help [COMMAND]`](#sen-scripts-help-command)
-* [`sen-scripts keypair`](#sen-scripts-keypair)
-
-## `sen-scripts hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ sen-scripts hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/hello.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/hello.ts)_
+* [`sen-scripts payer [FILE]`](#sen-scripts-payer-file)
+* [`sen-scripts program [FILE]`](#sen-scripts-program-file)
 
 ## `sen-scripts help [COMMAND]`
 
@@ -65,20 +49,41 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
 
-## `sen-scripts keypair`
+## `sen-scripts payer [FILE]`
 
-describe the command here
+Handle payer's keypair
 
 ```
 USAGE
-  $ sen-scripts keypair
+  $ sen-scripts payer [FILE]
 
 OPTIONS
-  -f, --force          Force to overwrite the output
-  -h, --help           show CLI help
-  -i, --input=input    Directory to the config file, soprox.config.js
-  -o, --output=output  Directory to output the keypair file
+  -f, --force            Force to overwrite the output
+  -h, --help             show CLI help
+  -i, --input=input      Directory to the config file, soprox.config.js
+  -n, --network=network  devnet | testnet | mainnet | custom
+  -o, --output=output    Directory to output the keypair file
+  -s, --show             Read the payer keypair
 ```
 
-_See code: [src/commands/keypair.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/keypair.ts)_
+_See code: [src/commands/payer.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/payer.ts)_
+
+## `sen-scripts program [FILE]`
+
+Handle program's keypair
+
+```
+USAGE
+  $ sen-scripts program [FILE]
+
+OPTIONS
+  -f, --force            Force to overwrite the output
+  -h, --help             show CLI help
+  -i, --input=input      Directory to the config file, soprox.config.js
+  -n, --network=network  devnet | testnet | mainnet | custom
+  -o, --output=output    Directory to output the keypair file
+  -s, --show             Read the program keypair
+```
+
+_See code: [src/commands/program.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.1/src/commands/program.ts)_
 <!-- commandsstop -->

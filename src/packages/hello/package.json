@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/DescartesNetwork/soprox#readme",
   "dependencies": {
-    "@solana/web3.js": "^0.87.0",
+    "@solana/web3.js": "^1.24.1",
     "soprox-abi": "0.0.13"
   },
   "devDependencies": {}
