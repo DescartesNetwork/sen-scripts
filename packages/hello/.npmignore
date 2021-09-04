@@ -1,4 +1,0 @@
-# Trick to prevent this auto process
-# https://docs.npmjs.com/cli/v7/using-npm/developers#keeping-files-out-of-your-package
-# The bug maybe described here
-# https://github.com/npm/npm/issues/1862

@@ -1,0 +1,11 @@
+/Users/tuphan/Desktop/soprox/packages/hello/program/target/release/deps/libthiserror_impl-b6ac6896214abcfd.dylib: /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/lib.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/ast.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/attr.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/expand.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/fmt.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/prop.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/valid.rs
+
+/Users/tuphan/Desktop/soprox/packages/hello/program/target/release/deps/thiserror_impl-b6ac6896214abcfd.d: /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/lib.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/ast.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/attr.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/expand.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/fmt.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/prop.rs /Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/valid.rs
+
+/Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/lib.rs:
+/Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/ast.rs:
+/Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/attr.rs:
+/Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/expand.rs:
+/Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/fmt.rs:
+/Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/prop.rs:
+/Users/tuphan/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.23/src/valid.rs:

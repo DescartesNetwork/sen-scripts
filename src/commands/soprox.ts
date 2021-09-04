@@ -48,13 +48,17 @@ export default class Soprox extends Command {
       path.join(template, 'dist'),
       path.join(template, 'node_modules'),
       path.join(template, 'package-lock.json'),
-      path.join(template, '.npmignore'),
     ]
     fs.copySync(template, project, {
       filter: function (src, dst) {
         return !Boolean(ignores.find((ignore) => src.includes(ignore)))
       },
     })
+    // Weird behavior of npm packaging: https://github.com/npm/npm/issues/3763
+    fs.renameSync(
+      path.join(project, 'gitignore'),
+      path.join(project, '.gitignore'),
+    )
     execSync('npm install', { cwd: project, stdio: 'inherit' })
     spinner.succeed('The project has been created!')
     this.log('Check it out!', project)
