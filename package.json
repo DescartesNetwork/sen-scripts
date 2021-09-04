@@ -1,7 +1,7 @@
 {
   "name": "@senswap/sen-scripts",
   "description": "Convenient scripts for keypair creation, contract deployment, and many others",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "tuphan-dn @tuphan-dn",
   "bin": {
     "sen-scripts": "./bin/run"
@@ -56,7 +56,9 @@
   "repository": "DescartesNetwork/sen-scripts",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "prepack": "npm run build && oclif-dev manifest && oclif-dev readme && npm run static",
+    "build": "rm -rf lib && tsc -b",
+    "static": "cp -a ./src/packages ./lib/packages",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md",
     "prepare": "husky install"
