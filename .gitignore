@@ -1,8 +1,10 @@
 *-debug.log
 *-error.log
 /.nyc_output
-/dist
-/lib
-/tmp
 /yarn.lock
+
+dist
+lib
+tmp
 node_modules
+target
