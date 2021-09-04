@@ -23,6 +23,6 @@
     "soprox-abi": "0.0.13"
   },
   "devDependencies": {
-    "@senswap/sen-scripts": "^0.0.9"
+    "@senswap/sen-scripts": "^0.0.10"
   }
 }
