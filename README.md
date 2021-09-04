@@ -3,10 +3,9 @@ sen-scripts
 
 Convenient scripts for keypair creation, contract deployment, and many others
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/sen-scripts.svg)](https://npmjs.org/package/sen-scripts)
-[![Downloads/week](https://img.shields.io/npm/dw/sen-scripts.svg)](https://npmjs.org/package/sen-scripts)
-[![License](https://img.shields.io/npm/l/sen-scripts.svg)](https://github.com/DescartesNetwork/sen-scripts/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@senswap/sen-scripts.svg)](https://npmjs.org/package/sen-scripts)
+[![Downloads/week](https://img.shields.io/npm/dw/@senswap/sen-scripts.svg)](https://npmjs.org/package/sen-scripts)
+[![License](https://img.shields.io/npm/l/@senswap/sen-scripts.svg)](https://github.com/DescartesNetwork/sen-scripts/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -15,11 +14,11 @@ Convenient scripts for keypair creation, contract deployment, and many others
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g sen-scripts
+$ npm install -g @senswap/sen-scripts
 $ sen-scripts COMMAND
 running command...
 $ sen-scripts (-v|--version|version)
-sen-scripts/0.0.1 darwin-x64 node-v14.16.1
+@senswap/sen-scripts/0.0.1 darwin-x64 node-v14.16.1
 $ sen-scripts --help [COMMAND]
 USAGE
   $ sen-scripts COMMAND

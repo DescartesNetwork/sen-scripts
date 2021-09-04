@@ -1,5 +1,5 @@
 {
-  "name": "sen-scripts",
+  "name": "@senswap/sen-scripts",
   "description": "Convenient scripts for keypair creation, contract deployment, and many others",
   "version": "0.0.1",
   "author": "tuphan-dn @tuphan-dn",
