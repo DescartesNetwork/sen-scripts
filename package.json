@@ -34,6 +34,13 @@
   "engines": {
     "node": ">=8.0.0"
   },
+  "files": [
+    "/bin",
+    "/lib",
+    "/packages",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
   "homepage": "https://github.com/DescartesNetwork/sen-scripts",
   "keywords": [
     "oclif"
