@@ -6,7 +6,8 @@
   "testnetDefaultChannel": "v1.6.9",
   "scripts": {
     "build": "cargo build-bpf --manifest-path=./program/Cargo.toml --bpf-out-dir=dist",
-    "deploy": "solana program deploy -k ./dist/payer-keypair.json ./dist/main.so"
+    "deploy": "solana program deploy -k ./dist/payer-keypair.json ./dist/main.so",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "soprox-abi": "0.0.13"
   },
   "devDependencies": {
-    "@senswap/sen-scripts": "^0.0.16"
+    "@senswap/sen-scripts": "^0.0.16",
+    "husky": "^7.0.0"
   }
 }

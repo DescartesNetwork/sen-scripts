@@ -1,4 +1,5 @@
 {
+  "currentNetwork": "devnet",
   "devnet": {
     "nodeUrl": "https://api.devnet.solana.com",
     "payer": {

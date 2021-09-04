@@ -6,6 +6,23 @@ import { Keypair } from '@solana/web3.js'
 const DEFAULT_CONFIG = './soprox.config.json'
 const DEFAULT_KEYPAIR = './dist/main-keypair.json'
 
+function autogen(config: string, network?: string) {
+  const conf = require(config)
+  const net = network ?? conf.currentNetwork ?? 'devnet'
+  if (!conf[net]?.payer?.secretKey) {
+    const k = new Keypair()
+    conf[net] = {
+      ...conf[net],
+      program: {
+        address: k.publicKey.toBase58(),
+        secretKey: Buffer.from(k.secretKey).toString('hex'),
+      },
+    }
+    fs.writeFileSync(config, JSON.stringify(conf, null, 2))
+  }
+  return net
+}
+
 export default class Program extends Command {
   static description = `Handle program's keypair. Default file: ${DEFAULT_KEYPAIR}`
 
@@ -46,9 +63,7 @@ export default class Program extends Command {
     }
     // Create a new keypair
     else {
-      const network = flags.network ?? 'devnet'
       const config = path.join(process.cwd(), flags.config ?? DEFAULT_CONFIG)
-
       if (!fs.existsSync(config))
         return this.error(`Cannot find the config file ${config}.`)
       if (fs.existsSync(config) && !flags.force) {
@@ -60,13 +75,12 @@ export default class Program extends Command {
         fs.closeSync(fs.openSync(config, 'w')) // Clear or Create a new file
       }
 
+      const network = autogen(config, flags.network)
       const {
         [network]: {
-          program: { address, secretKey },
+          payer: { address, secretKey },
         },
       } = require(config)
-      if (!secretKey)
-        return this.error(`Program's secretKey in ${network} config is empty.`)
       const keypair = Keypair.fromSecretKey(Buffer.from(secretKey, 'hex'))
       const generatedAddress = keypair.publicKey.toBase58()
       if (address && address !== generatedAddress)
