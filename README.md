@@ -51,18 +51,17 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3
 
 ## `sen-scripts payer [FILE]`
 
-Handle payer's keypair
+Handle payer's keypair. Default file: ./dist/payer-keypair.json
 
 ```
 USAGE
   $ sen-scripts payer [FILE]
 
 OPTIONS
+  -c, --config=config    Directory to the config file, soprox.config.js
   -f, --force            Force to overwrite the output
   -h, --help             show CLI help
-  -i, --input=input      Directory to the config file, soprox.config.js
   -n, --network=network  devnet | testnet | mainnet | custom
-  -o, --output=output    Directory to output the keypair file
   -s, --show             Read the payer keypair
 ```
 
@@ -70,18 +69,17 @@ _See code: [src/commands/payer.ts](https://github.com/DescartesNetwork/sen-scrip
 
 ## `sen-scripts program [FILE]`
 
-Handle program's keypair
+Handle program's keypair. Default file: ./dist/main-keypair.json
 
 ```
 USAGE
   $ sen-scripts program [FILE]
 
 OPTIONS
+  -c, --config=config    Directory to the config file, soprox.config.js
   -f, --force            Force to overwrite the output
   -h, --help             show CLI help
-  -i, --input=input      Directory to the config file, soprox.config.js
   -n, --network=network  devnet | testnet | mainnet | custom
-  -o, --output=output    Directory to output the keypair file
   -s, --show             Read the program keypair
 ```
 
