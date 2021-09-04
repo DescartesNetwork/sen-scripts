@@ -1,7 +1,7 @@
 {
   "name": "@senswap/sen-scripts",
   "description": "Convenient scripts for keypair creation, contract deployment, and many others",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "tuphan-dn @tuphan-dn",
   "bin": {
     "sen-scripts": "./bin/run"
@@ -37,6 +37,7 @@
   "files": [
     "/bin",
     "/lib",
+    "/packages",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
