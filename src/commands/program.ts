@@ -9,7 +9,7 @@ const DEFAULT_KEYPAIR = './dist/main-keypair.json'
 function autogen(config: string, network?: string) {
   const conf = require(config)
   const net = network ?? conf.currentNetwork ?? 'devnet'
-  if (!conf[net]?.payer?.secretKey) {
+  if (!conf[net]?.program?.secretKey) {
     const k = new Keypair()
     conf[net] = {
       ...conf[net],
