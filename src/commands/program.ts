@@ -71,8 +71,8 @@ export default class Program extends Command {
           `The file ${file} already existed. Please change another name and try again!`,
         )
       } else {
-        fs.mkdirSync(path.dirname(config), { recursive: true })
-        fs.closeSync(fs.openSync(config, 'w')) // Clear or Create a new file
+        fs.mkdirSync(path.dirname(file), { recursive: true })
+        fs.closeSync(fs.openSync(file, 'w')) // Clear or Create a new file
       }
 
       const network = autogen(config, flags.network)
