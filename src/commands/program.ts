@@ -42,6 +42,10 @@ export default class Program extends Command {
       char: 's',
       description: 'Read the program keypair',
     }),
+    loose: flags.boolean({
+      char: 'l',
+      description: 'Skip the process if the key exists',
+    }),
     force: flags.boolean({
       char: 'f',
       description: 'Force to overwrite the output',
@@ -67,6 +71,7 @@ export default class Program extends Command {
       if (!fs.existsSync(config))
         return this.error(`Cannot find the config file ${config}.`)
       if (fs.existsSync(file) && !flags.force) {
+        if (flags.loose) return this.exit()
         return this.error(
           `The file ${file} already existed. Please change another name and try again!`,
         )
