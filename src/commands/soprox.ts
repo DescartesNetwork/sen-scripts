@@ -3,8 +3,8 @@ import * as fs from 'fs-extra'
 import * as path from 'path'
 import { execSync } from 'child_process'
 
-function getTemplateDir(template: string) {
-  return path.join(__dirname, '../../packages', template)
+const REPOS: Record<string, string> = {
+  hello: 'git@github.com:DescartesNetwork/soprox-hello.git',
 }
 
 export default class Soprox extends Command {
@@ -31,7 +31,7 @@ export default class Soprox extends Command {
     if (!args.project) return this.error('Enter the project name')
 
     const project = path.join(process.cwd(), args.project)
-    const template = getTemplateDir(flags.template ?? 'hello')
+    const template = flags.template ?? 'hello'
 
     if (fs.existsSync(project) && !flags.force) {
       return this.error(
@@ -39,26 +39,13 @@ export default class Soprox extends Command {
       )
     } else {
       fs.removeSync(project)
-      fs.mkdirSync(project, { recursive: true })
     }
 
     this.log('\n👏👏👏 Thank you for using SoproX!\n')
     const spinner = require('ora')('Building the project...\n').start()
-    const ignores = [
-      path.join(template, 'dist'),
-      path.join(template, 'node_modules'),
-      path.join(template, 'package-lock.json'),
-    ]
-    fs.copySync(template, project, {
-      filter: function (src, dst) {
-        return !Boolean(ignores.find((ignore) => src.includes(ignore)))
-      },
+    execSync(`git clone ${REPOS[template]} ${args.project}`, {
+      stdio: 'inherit',
     })
-    // Weird behavior of npm packaging: https://github.com/npm/npm/issues/3763
-    fs.renameSync(
-      path.join(project, 'gitignore'),
-      path.join(project, '.gitignore'),
-    )
     execSync('npm install', { cwd: project, stdio: 'inherit' })
     execSync('npm run prepare', { cwd: project, stdio: 'inherit' })
     spinner.succeed('The project has been created!')
