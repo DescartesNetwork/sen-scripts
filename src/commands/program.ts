@@ -66,7 +66,7 @@ export default class Program extends Command {
       const config = path.join(process.cwd(), flags.config ?? DEFAULT_CONFIG)
       if (!fs.existsSync(config))
         return this.error(`Cannot find the config file ${config}.`)
-      if (fs.existsSync(config) && !flags.force) {
+      if (fs.existsSync(file) && !flags.force) {
         return this.error(
           `The file ${file} already existed. Please change another name and try again!`,
         )
