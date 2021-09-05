@@ -78,7 +78,7 @@ export default class Program extends Command {
       const network = autogen(config, flags.network)
       const {
         [network]: {
-          payer: { address, secretKey },
+          program: { address, secretKey },
         },
       } = require(config)
       const keypair = Keypair.fromSecretKey(Buffer.from(secretKey, 'hex'))
