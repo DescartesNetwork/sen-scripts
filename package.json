@@ -1,7 +1,7 @@
 {
   "name": "@senswap/sen-scripts",
-  "description": "Convenient scripts for keypair creation, contract deployment, and many others",
-  "version": "0.0.25",
+  "description": "Convenient scripts for Sentre development",
+  "version": "0.0.26",
   "author": "tuphan-dn @tuphan-dn",
   "bin": {
     "sen-scripts": "./bin/run"
@@ -25,7 +25,6 @@
     "@types/node": "^10.17.60",
     "chai": "^4.3.4",
     "globby": "^10.0.2",
-    "husky": "^7.0.0",
     "mocha": "^5.2.0",
     "nyc": "^14.1.1",
     "ts-node": "^8.10.2",
@@ -43,8 +42,9 @@
   ],
   "homepage": "https://github.com/DescartesNetwork/sen-scripts",
   "keywords": [
-    "senswap",
-    "soprox"
+    "sentre",
+    "soprox",
+    "senhub"
   ],
   "license": "MIT",
   "main": "lib/index.js",
@@ -61,8 +61,7 @@
     "prepack": "npm run build && oclif-dev manifest && oclif-dev readme",
     "build": "rm -rf lib && tsc -b",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md",
-    "prepare": "husky install"
+    "version": "oclif-dev readme && git add README.md"
   },
   "types": "lib/index.d.ts"
 }
