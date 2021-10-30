@@ -7,7 +7,7 @@ const REPOS: Record<string, string> = {
   senhub: 'git@github.com:DescartesNetwork/senhub.git',
 }
 
-export default class Soprox extends Command {
+export default class SenHub extends Command {
   static description = 'To build a DApp on Sentre Ecosystem'
 
   static args = [{ name: 'project' }]
@@ -25,7 +25,7 @@ export default class Soprox extends Command {
   }
 
   async run() {
-    const { args, flags } = this.parse(Soprox)
+    const { args, flags } = this.parse(SenHub)
 
     if (!args.project) return this.error('Enter the project name')
 

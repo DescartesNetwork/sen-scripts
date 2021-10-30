@@ -18,7 +18,7 @@ $ npm install -g @senswap/sen-scripts
 $ sen-scripts COMMAND
 running command...
 $ sen-scripts (-v|--version|version)
-@senswap/sen-scripts/0.0.25 darwin-x64 node-v14.16.1
+@senswap/sen-scripts/0.0.26 darwin-x64 node-v14.16.1
 $ sen-scripts --help [COMMAND]
 USAGE
   $ sen-scripts COMMAND
@@ -30,6 +30,7 @@ USAGE
 * [`sen-scripts help [COMMAND]`](#sen-scripts-help-command)
 * [`sen-scripts payer [FILE]`](#sen-scripts-payer-file)
 * [`sen-scripts program [FILE]`](#sen-scripts-program-file)
+* [`sen-scripts senhub [FILE]`](#sen-scripts-senhub-file)
 * [`sen-scripts soprox [PROJECT]`](#sen-scripts-soprox-project)
 
 ## `sen-scripts help [COMMAND]`
@@ -66,7 +67,7 @@ OPTIONS
   -s, --show             Read the payer keypair
 ```
 
-_See code: [src/commands/payer.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.25/src/commands/payer.ts)_
+_See code: [src/commands/payer.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.26/src/commands/payer.ts)_
 
 ## `sen-scripts program [FILE]`
 
@@ -85,7 +86,23 @@ OPTIONS
   -s, --show             Read the program keypair
 ```
 
-_See code: [src/commands/program.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.25/src/commands/program.ts)_
+_See code: [src/commands/program.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.26/src/commands/program.ts)_
+
+## `sen-scripts senhub [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ sen-scripts senhub [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/senhub.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.26/src/commands/senhub.ts)_
 
 ## `sen-scripts soprox [PROJECT]`
 
@@ -101,5 +118,5 @@ OPTIONS
   -t, --template=template  Choose template. Default: hello
 ```
 
-_See code: [src/commands/soprox.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.25/src/commands/soprox.ts)_
+_See code: [src/commands/soprox.ts](https://github.com/DescartesNetwork/sen-scripts/blob/v0.0.26/src/commands/soprox.ts)_
 <!-- commandsstop -->
