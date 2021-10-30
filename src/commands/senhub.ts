@@ -50,6 +50,8 @@ export default class SenHub extends Command {
       stdio: 'inherit',
     })
     execSync('npm install', { cwd: project, stdio: 'inherit' })
+    execSync('rm ./.github/workflows/main.yml', { cwd: project, stdio: 'inherit' })
+    execSync('mv ./.github/template/app.yml ./.github/workflows/main.yml', { cwd: project, stdio: 'inherit' })
     spinner.succeed('The project has been created!')
     this.log('Check it out!', project)
   }

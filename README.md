@@ -1,7 +1,7 @@
 sen-scripts
 ===========
 
-Convenient scripts for keypair creation, contract deployment, and many others
+Convenient scripts for Sentre development
 
 [![Version](https://img.shields.io/npm/v/@senswap/sen-scripts.svg)](https://npmjs.org/package/sen-scripts)
 [![Downloads/week](https://img.shields.io/npm/dw/@senswap/sen-scripts.svg)](https://npmjs.org/package/sen-scripts)
