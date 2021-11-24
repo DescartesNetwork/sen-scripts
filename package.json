@@ -1,7 +1,7 @@
 {
   "name": "@senswap/sen-scripts",
   "description": "Convenient scripts for Sentre development",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "author": "tuphan-dn @tuphan-dn",
   "bin": {
     "sen-scripts": "./bin/run"

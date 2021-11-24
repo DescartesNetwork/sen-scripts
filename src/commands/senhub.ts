@@ -4,7 +4,8 @@ import * as path from 'path'
 import { execSync } from 'child_process'
 
 const REPOS: Record<string, string> = {
-  senhub: 'git@github.com:DescartesNetwork/senhub.git',
+  ssh_senhub: 'git@github.com:DescartesNetwork/senhub.git',
+  https_senhub: 'https://github.com/DescartesNetwork/senhub.git',
 }
 
 export default class SenHub extends Command {
@@ -22,6 +23,10 @@ export default class SenHub extends Command {
       char: 'f',
       description: 'Force to overwrite the output',
     }),
+    ssh: flags.boolean({
+      char: 's',
+      description: 'Clone the senhub repo by ssh íntead of https',
+    }),
   }
 
   async run() {
@@ -31,6 +36,8 @@ export default class SenHub extends Command {
 
     const project = path.join(process.cwd(), args.project)
     const template = flags.template ?? 'senhub'
+    const ssh = flags.ssh
+    const repo = ssh ? 'ssh_' + template : 'https_' + template
 
     if (fs.existsSync(project) && !flags.force) {
       return this.error(
@@ -42,7 +49,7 @@ export default class SenHub extends Command {
 
     this.log('\n👏👏👏 Welcome Sentizen!\n')
     const spinner = require('ora')('Building the project...\n').start()
-    execSync(`git clone ${REPOS[template]} ${args.project}`, {
+    execSync(`git clone ${REPOS[repo]} ${args.project}`, {
       stdio: 'inherit',
     })
     execSync('git remote rename origin senhub', {
@@ -50,8 +57,14 @@ export default class SenHub extends Command {
       stdio: 'inherit',
     })
     execSync('npm install', { cwd: project, stdio: 'inherit' })
-    execSync('rm ./.github/workflows/main.yml', { cwd: project, stdio: 'inherit' })
-    execSync('cp ./.github/template/app.yml ./.github/workflows/main.yml', { cwd: project, stdio: 'inherit' })
+    execSync('rm ./.github/workflows/main.yml', {
+      cwd: project,
+      stdio: 'inherit',
+    })
+    execSync('cp ./.github/template/app.yml ./.github/workflows/main.yml', {
+      cwd: project,
+      stdio: 'inherit',
+    })
     spinner.succeed('The project has been created!')
     this.log('Check it out!', project)
   }
