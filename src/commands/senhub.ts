@@ -56,7 +56,10 @@ export default class SenHub extends Command {
       cwd: project,
       stdio: 'inherit',
     })
-    execSync('npm install', { cwd: project, stdio: 'inherit' })
+    execSync('npm install --legacy-peer-deps', {
+      cwd: project,
+      stdio: 'inherit',
+    })
     execSync('rm ./.github/workflows/main.yml', {
       cwd: project,
       stdio: 'inherit',
